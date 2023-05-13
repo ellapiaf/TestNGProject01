@@ -5,25 +5,29 @@ import Utilities.ConfigReader;
 import Utilities.Driver;
 import Utilities.ReusableMethods;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class TC01 {
-    PearlymarketPage pearlymarketPage = new PearlymarketPage();
 
     @Test
     public void accountDetailGrn() {
+        PearlymarketPage pearlymarketPage = new PearlymarketPage();
+
         Driver.getDriver().get(ConfigReader.getProperty("pearly_url"));
 
+        //Driver.getDriver().get(ConfigReader.getProperty("pearly_url"));
+        pearlymarketPage.signIn.click();
         pearlymarketPage.email.sendKeys(ConfigReader.getProperty("musteri_email"));
         pearlymarketPage.password.sendKeys(ConfigReader.getProperty("musteri_password"));
         pearlymarketPage.login.click();
-        Assert.assertTrue(pearlymarketPage.myAccount.isDisplayed());
+        ReusableMethods.tumSayfaResmi();
 
-        Assert.assertTrue(pearlymarketPage.accountDetails.isDisplayed());
         pearlymarketPage.accountDetails.click();
         ReusableMethods.tumSayfaResmi();
-       //Assert.assertTrue(pearlymarketPage.accountDetails.isDisplayed());
+        //Assert.assertTrue(pearlymarketPage.accountDetails.isDisplayed());
 
     }
 

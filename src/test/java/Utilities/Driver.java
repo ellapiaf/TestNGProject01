@@ -22,11 +22,12 @@ import java.time.Duration;
        private access modifire kullanarak bir constructor olustururuz.
      */
 public class Driver {
+
     /*
-        Driver class'ındaki temel mantık extends yöntemiyle değil yani TestBase class'ına extent etmek yerine
-    Driver class'ından static methodlar kullanarak driver oluştururuz. Static olduğu için class ismi ile
-    her yerden methoda ulaşabileceğiz.
-     */
+       Driver class'ındaki temel mantık extends yöntemiyle değil yani TestBase class'ına extent etmek yerine
+   Driver class'ından static methodlar kullanarak driver oluştururuz. Static olduğu için class ismi ile
+   her yerden methoda ulaşabileceğiz.
+    */
     /*
     Singleton Pattern: Tekli kullanım kalıbı.
         Bir class'tan obje oluşturulmasının önüne geçilmesi için kullanılan ifade
@@ -74,5 +75,3 @@ public class Driver {
         }
     }
 }
-
-
